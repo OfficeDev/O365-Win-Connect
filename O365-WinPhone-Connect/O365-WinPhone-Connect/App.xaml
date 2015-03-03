@@ -9,9 +9,7 @@
         <SolidColorBrush x:Key="SampleHeaderBrush" Color="#007ACC" />
         <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="#1799F0" />
         <x:String x:Key="ProgressBarIndeterminateForegroundThemeBrush">White</x:String>
-        <x:String x:Key="ida:ClientID">2da1a48a-8a94-47a0-a356-32f36ca7f971</x:String>
-    
-        <x:String x:Key="ida:AuthorizationUri">https://login.windows.net</x:String>
+
     </Application.Resources>
 
 </Application>
