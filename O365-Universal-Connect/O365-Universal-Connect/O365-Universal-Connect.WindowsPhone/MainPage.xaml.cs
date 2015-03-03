@@ -80,7 +80,7 @@ namespace O365_Universal_Connect
             _displayName = result.UserInfo.GivenName;
             _mailAddress = result.UserInfo.DisplayableId;
             EmailAddressBox.Text = _mailAddress;
-            WelcomeText.Text = "Hello " + _displayName + rl.GetString("WelcomeMessage");
+            WelcomeText.Text = "Hello " + _displayName + ". " + rl.GetString("WelcomeMessage");
             MailButton.IsEnabled = true;
             _userLoggedIn = true;
             ProgressBar.Visibility = Visibility.Collapsed;
