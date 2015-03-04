@@ -38,7 +38,7 @@ The universal Windows app solution contains two projects: **O365-Universal-Conne
 This extra step will make sure that your app gets a redirect URI value in its Azure Active Directory settings. You don't need to know the value of this URI, but it's required for authenticating users in your app.
 
 
-**Note:** If you see any errors while installing packages during step 6, for example, *Unable to find "Microsoft.IdentityModel.Clients.ActiveDirectory"*, make sure the local path where you placed the solution is not too long/deep. Moving the solution closer to the root of your drive resolves this issue. We'll also work on shortening the folder names in a future update.      
+**Note:** If you see any errors while installing packages during step 7, for example, *Unable to find "Microsoft.IdentityModel.Clients.ActiveDirectory"*, make sure the local path where you placed the solution is not too long/deep. Moving the solution closer to the root of your drive resolves this issue. We'll also work on shortening the folder names in a future update.      
 
 ## Build ##
 
