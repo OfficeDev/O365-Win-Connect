@@ -3,7 +3,7 @@ These three code samples show how to connect to an Office 365 tenant send an e-m
 
 The interface is essentially the same on both platforms. The images below show what you'll see after you've authenticated in the apps.
 
-**Windows Phone 8.1**  | **Window Store**
+**Windows Phone 8.1**  | **Windows Store**
 ------------- | -------------
 ![](/Readme-images/O365-Windows-Connect-PhoneUI.png "Windows Phone interface for the O365-WinPlatform-Connect sample")  | ![](/Readme-images/O365-Windows-Connect-WindowsUI.png "Windows Phone interface for the O365-WinPlatform-Connect sample")
 
