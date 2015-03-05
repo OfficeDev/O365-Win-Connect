@@ -27,15 +27,15 @@ You can register each app with the Office 365 API Tools for Visual Studio. Be su
    5. After you're signed in, you will see a list of all the services. No permissions will be selected, since the app is not registered to use any services yet. 
    6. To register for the services used in this sample, choose the **(Mail) - Send mail as a user** permission. The dialog will look like this:
 ![](/Readme-images/O365-Windows-Connect-ServicesManager.png "Windows Phone interface for the O365-WinPlatform-Connect sample")
-   7. After clicking OK in the Services Manager dialog box, assemblies for connecting to Office 365 APIs will be added to your project. 
+   7. After you click **OK** in the Services Manager dialog box, assemblies for connecting to Office 365 APIs will be added to your project. 
 
 ###Universal Windows app registration
 
-The universal Windows app solution contains two projects: **O365-Universal-Connect.Windows** and **O365-Universal-Connect.Windows**. You can perform the registration steps for one project, and the Office 365 assemblies will be added to both projects. You will still, however, need to left-click the other project name and select Add -> Connected Service. When you do this, you'll see this prompt in the Services Manager dialog box:
+The universal Windows app solution contains two projects: **O365-Universal-Connect.Windows** and **O365-Universal-Connect.WindowsPhone**. You can perform the registration steps for one project, and the Office 365 assemblies will be added to both projects. However, you'll still need to left-click the other project name and select Add -> Connected Service. When you do this, you'll see this prompt in the Services Manager dialog box:
 
 ![](/Readme-images/O365-Windows-Connect-ServicesManager2.png "Windows Phone interface for the O365-WinPlatform-Connect sample")
 
-This extra step will make sure that your app gets a redirect URI value in its Azure Active Directory settings. You don't need to know the value of this URI, but it's required for authenticating users in your app.
+Click the **Yes** button. This extra step will make sure that your app gets a redirect URI value in its Azure Active Directory settings. You don't need to know the value of this URI, but it's required for authenticating users in your app.
 
 
 **Note:** If you see any errors while installing packages during step 7, for example, *Unable to find "Microsoft.IdentityModel.Clients.ActiveDirectory"*, make sure the local path where you placed the solution is not too long/deep. Moving the solution closer to the root of your drive resolves this issue. We'll also work on shortening the folder names in a future update.      
