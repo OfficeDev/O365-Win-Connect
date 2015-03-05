@@ -1,5 +1,7 @@
 # O365-WinPlatform-Connect
-These three code samples show how to connect to an Office 365 tenant send an e-mail inside a Windows Store app, a Windows Phone 8.1 app, and a [universal Windows app](http://blogs.windows.com/buildingapps/2014/04/02/extending-platform-commonality-through-universal-windows-apps/). The universal Windows app contains shared code files that you can use on both the Windows Store and Windows Phone 8.1 platforms to interact with an Office 365 tenant. The code files that implement the user interfaces for both the Phone and the Windows apps are separate, but the rest of the logic in the universal Windows app is mostly shared.
+These three code samples show how to connect to an Office 365 tenant send an e-mail inside a Windows Store app, a Windows Phone 8.1 app, and a [universal Windows app](http://blogs.windows.com/buildingapps/2014/04/02/extending-platform-commonality-through-universal-windows-apps/).
+
+The universal Windows app contains shared code files that you can use on both the Windows Store and Windows Phone 8.1 platforms to interact with an Office 365 tenant. The code files that implement the user interfaces for both the Phone and the Windows apps are separate, but the rest of the logic in the universal Windows app is mostly shared.
 
 The interface is essentially the same on both platforms. The images below show what you'll see after you've authenticated in the apps.
 
@@ -38,7 +40,7 @@ The universal Windows app solution contains two projects: **O365-Universal-Conne
 Click the **Yes** button. This extra step will make sure that your app gets a redirect URI value in its Azure Active Directory settings. You don't need to know the value of this URI, but it's required for authenticating users in your app.
 
 
-**Note:** If you see any errors while installing packages during step 7, for example, *Unable to find "Microsoft.IdentityModel.Clients.ActiveDirectory"*, make sure the local path where you placed the solution is not too long/deep. Moving the solution closer to the root of your drive resolves this issue. We'll also work on shortening the folder names in a future update.      
+**Note:** If you see any errors while installing packages during step 7, for example, *Unable to find "Microsoft.IdentityModel.Clients.ActiveDirectory"*, make sure the local path where you placed the solution is not too long/deep. Moving the solution closer to the root of your drive resolves this issue.
 
 ## Build ##
 
