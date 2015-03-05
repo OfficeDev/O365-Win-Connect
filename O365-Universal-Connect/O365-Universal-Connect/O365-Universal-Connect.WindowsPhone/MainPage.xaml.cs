@@ -44,6 +44,16 @@ namespace O365_Universal_Connect
             this.NavigationCacheMode = NavigationCacheMode.Required;
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            // Developer code - if you haven't registered the app yet, we warn you. 
+            if (!App.Current.Resources.ContainsKey("ida:ClientID"))
+            {
+                WelcomeText.Text = "Oops - App not registered with Office 365. To run this sample, you must register it with Office 365. You can do that through the 'Add | Connected services' dialog in Visual Studio. See Readme for more info";
+                ConnectButton.IsEnabled = false;
+            }
+        }
+
         #region IWebAuthenticationContinuable implementation
 
         // This method is automatically invoked when the application is reactivated after an authentication interaction through WebAuthenticationBroker. 
@@ -53,7 +63,7 @@ namespace O365_Universal_Connect
         public async void ContinueWebAuthentication(WebAuthenticationBrokerContinuationEventArgs args)
         {
             var rl = ResourceLoader.GetForCurrentView();
-            WelcomeText.Text = "Acquiring token...";
+            WelcomeText.Text = "acquiring token...";
             // pass the authentication interaction results to ADAL, which will conclude the token acquisition operation and invoke the callback specified in AcquireTokenAndContinue (in AuthenticationHelper).
             AuthenticationResult result = await AuthenticationHelper._authenticationContext.ContinueAcquireTokenAsync(args);
 
@@ -82,9 +92,10 @@ namespace O365_Universal_Connect
             EmailAddressBox.Text = _mailAddress;
             WelcomeText.Text = "Hi " + _displayName + ". " + rl.GetString("WelcomeMessage");
             MailButton.IsEnabled = true;
+            EmailAddressBox.IsEnabled = true;
             _userLoggedIn = true;
             ProgressBar.Visibility = Visibility.Collapsed;
-            ConnectButton.Content = "Disconnect";
+            ConnectButton.Content = "disconnect";
  
         }
 
@@ -115,7 +126,8 @@ namespace O365_Universal_Connect
                 AuthenticationHelper.SignOut();
                 WelcomeText.Text = "";
                 MailButton.IsEnabled = false;
-                ConnectButton.Content = "Connect";
+                EmailAddressBox.IsEnabled = false;
+                ConnectButton.Content = "connect";
                 this._displayName = null;
                 this._mailAddress = null;
                 ProgressBar.Visibility = Visibility.Collapsed;
@@ -127,7 +139,7 @@ namespace O365_Universal_Connect
         private async void MailButton_Click(object sender, RoutedEventArgs e)
         {
             var rl = ResourceLoader.GetForCurrentView();
-            WelcomeText.Text = "Sending mail.";
+            WelcomeText.Text = "sending mail...";
             ProgressBar.Visibility = Visibility.Visible;
             _mailAddress = EmailAddressBox.Text;
             try
@@ -138,7 +150,7 @@ namespace O365_Universal_Connect
             {
                 WelcomeText.Text = rl.GetString("MailErrorMessage");
             }
-            WelcomeText.Text = "Mail sent.";
+            WelcomeText.Text = "mail sent";
             ProgressBar.Visibility = Visibility.Collapsed;
         }
 

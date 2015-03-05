@@ -28,9 +28,9 @@
                      Visibility="Collapsed"
                      Grid.Row="0" VerticalAlignment="Top" Margin="222,56,244,0"  IsIndeterminate="True"/>
         <TextBlock Grid.Row="1" x:Name="WelcomeText" HorizontalAlignment="Center" TextAlignment="Center" FontSize="20" TextWrapping="Wrap"  Width="440"/>
-        <Button Grid.Row="2" x:Name="ConnectButton" HorizontalAlignment="Center" Content="Connect" Click="ConnectButton_Click" Height="80" Width="243"/>
-        <Button Grid.Row="3" x:Name="MailButton" Content="Send mail" IsEnabled="False" HorizontalAlignment="Center" Click="MailButton_Click"  Height="77" Width="243"/>
-        <TextBox Grid.Row="3" x:Name="EmailAddressBox" HorizontalAlignment="Center" VerticalAlignment="Bottom" TextWrapping="Wrap" Text="email address" Width="237" Height="30" />
+        <Button Grid.Row="2" x:Name="ConnectButton" HorizontalAlignment="Center" Content="connect" Click="ConnectButton_Click" Height="80" Width="243"/>
+        <Button Grid.Row="3" x:Name="MailButton" Content="send mail" IsEnabled="False" HorizontalAlignment="Center" Click="MailButton_Click"  Height="77" Width="243"/>
+        <TextBox Grid.Row="3" x:Name="EmailAddressBox" HorizontalAlignment="Center" VerticalAlignment="Bottom" TextWrapping="Wrap" PlaceholderText="email address" IsEnabled="False" Width="237" Height="30" />
 
     </Grid>
 </Page>

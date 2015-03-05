@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="O365_Universal_Connect.Windows.App">
-      <m2:VisualElements DisplayName="O365-Universal-Connect.Windows" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="O365-Windows-Connect.Windows" ForegroundText="light" BackgroundColor="#1799F0">
+      <m2:VisualElements DisplayName="O365-Connect" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="O365-Windows-Connect.Windows" ForegroundText="light" BackgroundColor="#1799F0">
         <m2:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#1799F0" />
       </m2:VisualElements>
     </Application>

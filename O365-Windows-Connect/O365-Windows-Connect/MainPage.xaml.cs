@@ -39,6 +39,16 @@ namespace O365_Windows_Connect
             this.InitializeComponent();
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            // Developer code - if you haven't registered the app yet, we warn you. 
+            if (!App.Current.Resources.ContainsKey("ida:ClientID"))
+            {
+                WelcomeText.Text = "Oops - App not registered with Office 365. To run this sample, you must register it with Office 365. You can do that through the 'Add | Connected services' dialog in Visual Studio. See Readme for more info";
+                ConnectButton.IsEnabled = false;
+            }
+        }
+
         /// <summary>
         /// Signs in the current user.
         /// </summary>
@@ -62,15 +72,16 @@ namespace O365_Windows_Connect
             var rl = ResourceLoader.GetForCurrentView();
             if (!_userLoggedIn)
             {
-                WelcomeText.Text = "Acquiring token.";
+                WelcomeText.Text = "acquiring token...";
                 ProgressBar.Visibility=Visibility.Visible;
                 await SignInCurrentUserAsync();
                 if (!String.IsNullOrEmpty(_displayName))
                 {
                     WelcomeText.Text = "Hi " + _displayName + Environment.NewLine + rl.GetString("WelcomeMessage");
                     MailButton.IsEnabled = true;
+                    EmailAddressBox.IsEnabled = true;
                     _userLoggedIn = true;
-                    ConnectButton.Content = "Disconnect";
+                    ConnectButton.Content = "disconnect";
                     EmailAddressBox.Text = _mailAddress;
                 }
                 else
@@ -85,8 +96,9 @@ namespace O365_Windows_Connect
                 WelcomeText.Text = "";
                 ProgressBar.Visibility = Visibility.Collapsed;
                 MailButton.IsEnabled = false;
+                EmailAddressBox.IsEnabled = false;
                 _userLoggedIn = false;
-                ConnectButton.Content = "Connect";
+                ConnectButton.Content = "connect";
                 this._displayName = null;
                 this._mailAddress = null;
             }

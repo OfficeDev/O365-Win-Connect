@@ -29,7 +29,7 @@ namespace O365_Universal_Connect
     public sealed partial class MainPage : Page
     {
         private string _mailAddress;
-        private string _displayName = "(not connected)";
+        private string _displayName = null;
         private MailHelper _mailHelper = new MailHelper();
         private bool _userLoggedIn = false;
         public static ApplicationDataContainer _settings = ApplicationData.Current.LocalSettings;
@@ -37,6 +37,16 @@ namespace O365_Universal_Connect
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            // Developer code - if you haven't registered the app yet, we warn you. 
+            if (!App.Current.Resources.ContainsKey("ida:ClientID"))
+            {
+                WelcomeText.Text = "Oops - App not registered with Office 365. To run this sample, you must register it with Office 365. You can do that through the 'Add | Connected services' dialog in Visual Studio. See Readme for more info";
+                ConnectButton.IsEnabled = false;
+            }
         }
 
         /// <summary>
@@ -62,15 +72,16 @@ namespace O365_Universal_Connect
             var rl = ResourceLoader.GetForCurrentView();
             if (!_userLoggedIn)
             {
-                WelcomeText.Text = "Acquiring token.";
+                WelcomeText.Text = "acquiring token...";
                 ProgressBar.Visibility = Visibility.Visible;
                 await SignInCurrentUserAsync();
                 if (!String.IsNullOrEmpty(_displayName))
                 {
                     WelcomeText.Text = "Hi " + _displayName + Environment.NewLine + rl.GetString("WelcomeMessage");
                     MailButton.IsEnabled = true;
+                    EmailAddressBox.IsEnabled = true;
                     _userLoggedIn = true;
-                    ConnectButton.Content = "Disconnect";
+                    ConnectButton.Content = "disconnect";
                     EmailAddressBox.Text = _mailAddress;
                 }
                 else
@@ -85,8 +96,9 @@ namespace O365_Universal_Connect
                 WelcomeText.Text = "";
                 ProgressBar.Visibility = Visibility.Collapsed;
                 MailButton.IsEnabled = false;
+                EmailAddressBox.IsEnabled = false;
                 _userLoggedIn = false;
-                ConnectButton.Content = "Connect";
+                ConnectButton.Content = "connect";
                 this._displayName = null;
                 this._mailAddress = null;
             }
@@ -98,12 +110,12 @@ namespace O365_Universal_Connect
         {
             var rl = ResourceLoader.GetForCurrentView();
             _mailAddress = EmailAddressBox.Text;
-            WelcomeText.Text = "Sending mail";
+            WelcomeText.Text = "sending mail...";
             ProgressBar.Visibility = Visibility.Visible;
             try
             {
                 await _mailHelper.ComposeAndSendMailAsync(rl.GetString("MailSubject"), ComposePersonalizedMail(_displayName), _mailAddress);
-                WelcomeText.Text = "Mail sent";
+                WelcomeText.Text = "mail sent";
             }
             catch (Exception)
             {
