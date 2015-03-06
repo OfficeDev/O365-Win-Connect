@@ -18,7 +18,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Image Grid.Row="0" Source="Assets/Logo.scale-100.png" Height="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="279,0,0,0" RenderTransformOrigin="0.425,0.774"/>
-        <TextBlock Grid.Row="0" x:Name="appTitle" Text="Office 365 Connect Project"
+        <TextBlock Grid.Row="0" x:Name="appTitle" Text="Office 365 Connect Sample"
                        HorizontalAlignment="Center" 
                        VerticalAlignment="Top" 
                        TextWrapping="Wrap"
