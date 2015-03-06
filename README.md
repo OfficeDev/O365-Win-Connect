@@ -1,4 +1,4 @@
-# O365-WinPlatform-Connect
+# O365-Win-Connect
 These three code samples show how to connect to an Office 365 tenant send an e-mail inside a Windows Store app, a Windows Phone 8.1 app, and a [universal Windows app](http://blogs.windows.com/buildingapps/2014/04/02/extending-platform-commonality-through-universal-windows-apps/).
 
 The universal Windows app contains shared code files that you can use on both the Windows Store and Windows Phone 8.1 platforms to interact with an Office 365 tenant. The code files that implement the user interfaces for both the Phone and the Windows apps are separate, but the rest of the logic in the universal Windows app is mostly shared.
