@@ -3,8 +3,8 @@
   <Identity Name="4f6b8617-890b-4d8e-b01c-4764fd9af745" Publisher="CN=jamescro" Version="1.0.0.0" />
   <mp:PhoneIdentity PhoneProductId="4f6b8617-890b-4d8e-b01c-4764fd9af745" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>O365-Universal-Connect.WindowsPhone</DisplayName>
-    <PublisherDisplayName>jamescro</PublisherDisplayName>
+    <DisplayName>O365-Connect</DisplayName>
+    <PublisherDisplayName>Microsoft</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
