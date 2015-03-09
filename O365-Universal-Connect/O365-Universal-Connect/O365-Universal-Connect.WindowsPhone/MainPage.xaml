@@ -12,24 +12,44 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="90"/>
+            <RowDefinition Height="auto"/>
+            <!-- Image and Title -->
+            <RowDefinition Height="auto"/>
+            <!-- Progress bar -->
             <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <!-- Connect button -->
+            <RowDefinition Height="auto"/>
+            <!-- Send button -->
+            <RowDefinition Height="auto"/>
+            <!-- Email address -->
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <!-- Welcome text -->
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Image Grid.Row="0" Source="Assets/Logo70x70.png" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,10,0,0" Width="45"/>
-        <TextBlock Grid.Row="0" x:Name="appTitle" Text="Office 365 Connect Sample"
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Source="Assets/Logo70x70.png" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,10,0,0" Width="45"/>
+            <TextBlock Grid.Column="2" x:Name="appTitle" Text="Office 365 Connect Project"
                        HorizontalAlignment="Center" 
-                       VerticalAlignment="Top" Margin="60,10,23,0" Grid.ColumnSpan="2" 
-                       FontSize="24" Width="317"
+                       VerticalAlignment="Center"  
+                       FontSize="24" 
                        />
-        <ProgressBar x:Name="ProgressBar" Width="200" Visibility="Collapsed" HorizontalAlignment="Center" Margin="88,44,112,0" VerticalAlignment="Top" IsIndeterminate="True" Height="1"/>
-        <TextBlock x:Name="WelcomeText" FontSize="18" TextWrapping="Wrap" TextAlignment="Center" Margin="25,48,23,75" Grid.RowSpan="3"/>
-        <Button Grid.Row="2" VerticalAlignment="Bottom" x:Name="ConnectButton" Content="connect" HorizontalAlignment="Center" Click="ConnectButton_Click" />
-        <Button Grid.Row="3" x:Name="MailButton" IsEnabled="False" Content="send mail" HorizontalAlignment="Center" Click="MailButton_Click"/>
-        <TextBox Grid.Row="4" x:Name="EmailAddressBox" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap" PlaceholderText="email address" IsEnabled="False" Height="28" Width="231"/>
+        </Grid>
+
+        <ProgressBar Grid.Row="1" x:Name="ProgressBar" Width="200" Visibility="Collapsed" HorizontalAlignment="Stretch"  VerticalAlignment="Top" IsIndeterminate="True" Height="1" />
+        <Button Grid.Row="3" HorizontalAlignment="Center" x:Name="ConnectButton" Content="Connect" Click="ConnectButton_Click" />
+        <Button Grid.Row="4" x:Name="MailButton" IsEnabled="False" Content="Send mail" HorizontalAlignment="Center" Click="MailButton_Click" VerticalAlignment="Top" Width="109" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Row="5" x:Name="EmailAddressBox" HorizontalAlignment="Center" TextAlignment="Center"  TextWrapping="Wrap" PlaceholderText="email address" VerticalAlignment="Top"  Width="231" />
+        <TextBlock Grid.Row="7" x:Name="WelcomeText" FontSize="18" TextWrapping="Wrap" Text="not connected" TextAlignment="Center" VerticalAlignment="Stretch" />
     </Grid>
+
 </Page>
 <!--
 O365-APIs-Start-Windows, https://github.com/OfficeDev/O365-APIs-Start-Windows
