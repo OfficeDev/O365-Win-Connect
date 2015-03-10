@@ -1,5 +1,5 @@
 # O365-Win-Connect
-These three code samples show how to connect to an Office 365 tenant send an e-mail inside a Windows Store app, a Windows Phone 8.1 app, and a [universal Windows app](http://blogs.windows.com/buildingapps/2014/04/02/extending-platform-commonality-through-universal-windows-apps/).
+These three code samples show how to connect to an Office 365 tenant send an e-mail inside a Windows Store app, a Windows Phone 8.1 app, and a [universal Windows app](http://aka.ms/ag58ns).
 
 The universal Windows app contains shared code files that you can use on both the Windows Store and Windows Phone 8.1 platforms to interact with an Office 365 tenant. The code files that implement the user interfaces for both the Phone and the Windows apps are separate, but the rest of the logic in the universal Windows app is mostly shared.
 
@@ -13,16 +13,16 @@ The interface is essentially the same on both platforms. The images below show w
 
 This sample requires the following:  
   - Visual Studio 2013 with Update 3.  
-  - [Office 365 API Tools version 1.3.41104.1](https://visualstudiogallery.msdn.microsoft.com/a15b85e6-69a7-4fdf-adda-a38066bb5155).  
-  - An Office 365 account. You can sign up for [an Office 365 Developer subscription](https://msdn.microsoft.com/en-us/library/office/fp179924.aspx) that includes the resources that you need to start building Office 365 apps.
+  - [Office 365 API Tools version 1.3.41104.1](http://aka.ms/k0534n).  
+  - An Office 365 account. You can sign up for [an Office 365 Developer subscription](http://aka.ms/ro9c62) that includes the resources that you need to start building Office 365 apps.
  
 ###Register and configure the apps
 
 The configuration steps are the same for all three samples (with one small extra step for the universal Windows app).
 
-**Note:** If you see any errors while installing packages during step 7, for example, *Unable to find "Microsoft.IdentityModel.Clients.ActiveDirectory"*, make sure the local path where you placed the solution is not too long/deep. Moving the solution closer to the root of your drive resolves this issue.
+**Note:** If you see any errors while installing packages during step 7 (for example, *Unable to find "Microsoft.IdentityModel.Clients.ActiveDirectory"*) make sure the local path where you placed the solution is not too long/deep. Moving the solution closer to the root of your drive resolves this issue.
 
-You can register each app with the Office 365 API Tools for Visual Studio. Be sure to download and install the [Office 365 API tools](https://visualstudiogallery.msdn.microsoft.com/a15b85e6-69a7-4fdf-adda-a38066bb5155) from the Visual Studio Gallery.
+You can register each app with the Office 365 API Tools for Visual Studio. Be sure to download and install the [Office 365 API tools](http://aka.ms/k0534n) from the Visual Studio Gallery.
 
    1. Open the .sln file for the sample that you want to run (O365-Universal-Connect.sln, O365-Windows-Connect.sln, or O365-WinPhone-Connect.sln) using Visual Studio 2013.
    2. In the Solution Explorer window, right-click each project name and select Add -> Connected Service.
