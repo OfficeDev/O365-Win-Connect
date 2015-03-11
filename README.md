@@ -45,3 +45,9 @@ Click the **Yes** button. This extra step will make sure that your app gets a re
 
 After you've loaded the solution in Visual Studio, press F5 to build and debug.
 Run the solution and sign in with your organizational account to Office 365.
+
+## Next steps ##
+
+- If you have any trouble with running this sample, please [log an issue](https://github.com/OfficeDev/O365-WinPlatform-Connect/issues).
+- If you're interested in a sample that does a lot more with the Office 365 services in a Windows app, look at the [Office 365 Starter Project for Windows Store App](https://github.com/OfficeDev/O365-Windows-Start)
+- For more details on what else you can do with the Office 365 services in your Windows app, start with the [Getting started](http://aka.ms/rpx192) page on dev.office.com.
