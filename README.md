@@ -1,5 +1,5 @@
 # Connecting to Office 365 in Windows Store, Phone, and universal apps
-These three code samples show how to connect to an Office 365 tenant inside a Windows Store app, a Windows Phone 8.1 app, and a [universal Windows app](http://aka.ms/ag58ns).
+Authentication is the first step for any app that uses an Office 365 service. These three code samples show how to connect a user to an Office 365 tenant inside a Windows Store app, a Windows Phone 8.1 app, and a universal Windows app. Each solution contains a class called AuthenticationHelper that calls the Active Directory Authentication Library (ADAL) to authenticate a user.
 
 The universal Windows app contains shared code files that you can use on both the Windows Store and Windows Phone 8.1 platforms to interact with an Office 365 tenant. The code files that implement the user interfaces for both the Phone and the Windows apps are separate, but the rest of the logic in the universal Windows app is mostly shared.
 
@@ -9,7 +9,7 @@ The interface is essentially the same on both platforms. The images below show w
 ------------- | -------------
 ![](/Readme-images/O365-Windows-Connect-PhoneUI.png "Windows Phone interface for the O365-WinPlatform-Connect sample")  | ![](/Readme-images/O365-Windows-Connect-WindowsUI.png "Windows Phone interface for the O365-WinPlatform-Connect sample")
 
-## Prerequisites and Configuration ##
+## Prerequisites and configuration ##
 
 This sample requires the following:  
   - Visual Studio 2013 with Update 3.  
@@ -41,7 +41,7 @@ The universal Windows app solution contains two projects: **O365-Universal-Conne
 
 Click the **Yes** button. This extra step will make sure that your app gets a redirect URI value in its Azure Active Directory settings. You don't need to know the value of this URI, but it's required for authenticating users in your app.
 
-## Build ##
+## Build and debug ##
 
 After you've loaded the solution in Visual Studio, press F5 to build and debug.
 Run the solution and sign in with your organizational account to Office 365.
@@ -51,3 +51,10 @@ Run the solution and sign in with your organizational account to Office 365.
 - If you have any trouble running this sample, please [log an issue](https://github.com/OfficeDev/O365-WinPlatform-Connect/issues).
 - If you're interested in a sample that does a lot more with the Office 365 services in a Windows app, look at the [Office 365 Starter Project for Windows Store App](https://github.com/OfficeDev/O365-Windows-Start).
 - For more details on what else you can do with the Office 365 services in your Windows app, start with the [Getting started](http://aka.ms/rpx192) page on dev.office.com.
+
+## Additional resources ##
+
+- [Office 365 APIs documentation](http://aka.ms/kbwa5c)
+- [Office 365 APIs starter projects and code samples](http://aka.ms/x1kpnz)
+- [Office developer code samples](http://aka.ms/afh45z)
+- [Office dev center](http://aka.ms/uftrm1)
