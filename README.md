@@ -1,4 +1,7 @@
 # Connecting to Office 365 in Windows Store, Phone, and universal apps
+
+[日本 (日本語)](https://github.com/OfficeDev/O365-Win-Connect/blob/master/loc/README-ja.md)
+
 Authentication is the first step for any app that uses an Office 365 service. These three code samples show how to connect a user to an Office 365 tenant inside a Windows Store app, a Windows Phone 8.1 app, and a universal Windows app. Each solution contains a class called AuthenticationHelper that calls the Active Directory Authentication Library (ADAL) to authenticate a user.
 
 The universal Windows app contains shared code files that you can use on both the Windows Store and Windows Phone 8.1 platforms to interact with an Office 365 tenant. The code files that implement the user interfaces for both the Phone and the Windows apps are separate, but the rest of the logic in the universal Windows app is mostly shared.
