@@ -15,7 +15,7 @@ The interface is essentially the same on both platforms. The images below show w
 ## Prerequisites and configuration ##
 
 This sample requires the following:  
-  - Visual Studio 2013 with Update 3.  
+  - Visual Studio 2013 with Update 4.  
   - [Office 365 API Tools version 1.4.50428.2](http://aka.ms/k0534n).  
   - An Office 365 account. You can sign up for [an Office 365 Developer subscription](http://aka.ms/ro9c62) that includes the resources that you need to start building Office 365 apps.
  
