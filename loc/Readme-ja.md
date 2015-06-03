@@ -12,7 +12,7 @@
 ## 前提条件と構成 ##
 
 このサンプルを実行するには次のものが必要です。  
-  - Visual Studio 2013 更新プログラム 3。  
+  - Visual Studio 2013 更新プログラム 4。  
   - [Office 365 API ツール バージョン 1.4.50428.2](http://aka.ms/k0534n)。  
   - Office 365 アカウント。Office 365 アプリのビルドを開始するために必要なリソースを含む [Office 365 Developer サブスクリプション](http://aka.ms/ro9c62) にサイン アップできます。
  
