@@ -64,3 +64,4 @@ Run the solution and sign in with your organizational account to Office 365.
 - [Office 365 Code Snippets for Windows](https://github.com/OfficeDev/O365-Win-Snippets)
 - [Office 365 Starter Project for Windows Store App](https://github.com/OfficeDev/O365-Windows-Start)
 - [Office 365 Profile sample for Windows](https://github.com/OfficeDev/O365-Win-Profile)
+- [Office 365 REST API Explorer for Sites](https://github.com/OfficeDev/Office-365-REST-API-Explorer)
