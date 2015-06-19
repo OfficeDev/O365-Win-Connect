@@ -32,7 +32,7 @@ You can register each app with the Office 365 API Tools for Visual Studio. Be su
    3. A Services Manager dialog box will appear. Choose **Office 365** and then **Register your app**.
    4. On the sign-in dialog box, enter the user name and password for your Office 365 tenant. This user name will often follow the pattern <your-name>@<tenant-name>.onmicrosoft.com. If you don't already have a an Office 365 tenant, you can get a free Developer Site as part of your MSDN Benefits or sign up for a free trial.
    5. After you're signed in, you will see a list of all the services. No permissions will be selected, since the app is not registered to use any services yet. 
-   6. To register for the services used in this sample, choose the **(Mail) - Send mail as a user** permission. The dialog will look like this:
+   6. To register for the services used in this sample, choose the **(Mail) - Send mail as you** permission. The dialog will look like this:
 ![](/Readme-images/O365-Windows-Connect-ServicesManager.png "Windows Phone interface for the O365-WinPlatform-Connect sample")
    7. After you click **OK** in the Services Manager dialog box, assemblies for connecting to Office 365 APIs will be added to your project. 
 
