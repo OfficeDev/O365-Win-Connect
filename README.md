@@ -46,8 +46,7 @@ Click the **Yes** button. This extra step will make sure that your app gets a re
 
 ## Build and debug ##
 
-After you've loaded the solution in Visual Studio, press F5 to build and debug.
-Run the solution and sign in with your organizational account to Office 365.
+After you've loaded the solution in Visual Studio, press F5 to build and debug. If you're running a Windows Phone app, the Windows Phone emulator will launch. After the app launches, sign in with your organizational account to Office 365.
 
 ## Next steps ##
 
