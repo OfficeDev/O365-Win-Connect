@@ -1,4 +1,7 @@
 # Windows ストア、電話、およびユニバーサル アプリで Office 365 に接続する
+
+[日本 (日本語)](https://github.com/OfficeDev/O365-Win-Connect/blob/master/loc/Readme-ja.md) (日本語)
+
 認証は、Office 365 サービスを使用するすべてのアプリで実行する最初の手順です。これらの 3 つのコード サンプルは、Windows ストア アプリ、Windows Phone 8.1 アプリ、およびユニバーサル Windows アプリ内の Office 365 テナントにユーザーを接続する方法を示しています。各ソリューションには、ユーザーを認証するためにアクティブ ディレクトリ認証ライブラリ (ADAL) を呼び出す AuthenticationHelper というクラスが含まれています。
 
 ユニバーサル Windows アプリには、Office 365 テナントで操作する Windows ストアと Windows Phone 8.1 の両方のプラットフォームで使用できる共有コード ファイルが含まれています。電話と Windows アプリの両方のユーザー インターフェイスを実装するコード ファイルは別になっていますが、ユニバーサル Windows アプリの残りのロジックは、ほとんどが共有されています。
@@ -13,7 +16,7 @@
 
 このサンプルを実行するには次のものが必要です。  
   - Visual Studio 2013 更新プログラム 4。  
-  - [Office 365 API ツール バージョン 1.4.50428.2](http://aka.ms/k0534n)。  
+  - [Office 365 API Tools バージョン 1.4.50428.2](http://aka.ms/k0534n)。  
   - Office 365 アカウント。Office 365 アプリのビルドを開始するために必要なリソースを含む [Office 365 Developer サブスクリプション](http://aka.ms/ro9c62) にサイン アップできます。
  
 ###アプリを登録および構成する
@@ -42,18 +45,28 @@ Visual Studio 用 Office 365 API ツールを使用すると、各アプリを�
 
 ## ビルドとデバッグ ##
 
-Visual Studio でソリューションを読み込んだら、F5 キーを押してビルドとデバッグを実行します。ソリューションを実行し、所属組織のアカウントで Office 365 にサインインします。
+Visual Studio にソリューションを読み込ませたら、F5 を押してビルドとデバッグを行います。Windows Phone アプリを実行している場合、Windows Phone エミュレーターが起動します。アプリが起動した後、Office 365 に組織アカウントでサインインします。
+
+## 質問とコメント
+
+O365 Windows Connect プロジェクトについて、Microsoft にフィードバックをお寄せください。質問や提案につきましては、このリポジトリの「[問題](https://github.com/OfficeDev/O365-Win-Connect/issues)」セクションに送信できます。
+
+Office 365 開発全般の質問につきましては、「[スタック オーバーフロー](http://stackoverflow.com/questions/tagged/Office365+API)」に投稿してください。質問またはコメントには、必ず [Office365] および [API] のタグを付けてください。
 
 ## 次の手順 ##
 
-- このサンプルの実行について問題がある場合は、[問題をログに記録](https://github.com/OfficeDev/O365-WinPlatform-Connect/issues)してください。
 - Windows アプリで Office 365 サービスを使用してさらに多くのことを実行するサンプルに関心をお持ちの場合は、「[Office 365 Starter Project for Windows ストア アプリ](https://github.com/OfficeDev/O365-Windows-Start)」をご覧ください。
-- 他に Windows アプリで Office 365 サービスを使用して実行できることの詳細については、最初に dev.office.com にある「[使用を開始する](http://aka.ms/rpx192)」のページをご覧ください。
+- 他に Windows アプリで Office 365 サービスを使用して実行できることの詳細については、最初に dev.office.com にある「[使用を開始する](http://dev.office.com/getting-started)」のページをご覧ください。
 
 ## その他の技術情報 ##
 
-- [Office 365 API ドキュメント](http://aka.ms/kbwa5c)
-- [Office 365 API スタート プロジェクトおよびサンプル コード](http://aka.ms/x1kpnz)
-- [Office 開発者向けサンプル コード](http://aka.ms/afh45z)
-- [Office デベロッパー センター](http://aka.ms/uftrm1)
+- [Office 365 API プラットフォームの概要](https://msdn.microsoft.com/office/office365/howto/platform-development-overview)
+- [Office 365 API のサンプル コードとビデオ](https://msdn.microsoft.com/office/office365/howto/starter-projects-and-code-samples)
+- [Office 開発者向けサンプル コード](http://dev.office.com/code-samples)
+- [Office デベロッパー センター](http://dev.office.com/)
+- [Windows 用 Office 365 コード スニペット](https://github.com/OfficeDev/O365-Win-Snippets)
+- [Office 365 Starter Project for Windows ストア アプリ](https://github.com/OfficeDev/O365-Windows-Start)
+- [Windows 用 Office 365 プロファイル サンプル](https://github.com/OfficeDev/O365-Win-Profile)
+- [サイト用 Office 365 REST API Explorer](https://github.com/OfficeDev/Office-365-REST-API-Explorer)
+
 
