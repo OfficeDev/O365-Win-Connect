@@ -10,7 +10,7 @@ The interface is essentially the same on both platforms. The images below show w
 
 **Windows Phone 8.1**  | **Windows Store**
 ------------- | -------------
-![](/Readme-images/O365-Windows-Connect-PhoneUI.png "Windows Phone interface for the O365-WinPlatform-Connect sample")  | ![](/Readme-images/O365-Windows-Connect-WindowsUI.png "Windows Phone interface for the O365-WinPlatform-Connect sample")
+![Application main page on a mobile device](/Readme-images/O365-Windows-Connect-PhoneUI.png "Windows Phone interface for the O365-WinPlatform-Connect sample")  | ![Application main page on a desktop device](/Readme-images/O365-Windows-Connect-WindowsUI.png "Windows Phone interface for the O365-WinPlatform-Connect sample")
 
 ## Prerequisites and configuration ##
 
@@ -33,14 +33,14 @@ You can register each app with the Office 365 API Tools for Visual Studio. Be su
    4. On the sign-in dialog box, enter the user name and password for your Office 365 tenant. This user name will often follow the pattern <your-name>@<tenant-name>.onmicrosoft.com. If you don't already have a an Office 365 tenant, you can get a free Developer Site as part of your MSDN Benefits or sign up for a free trial.
    5. After you're signed in, you will see a list of all the services. No permissions will be selected, since the app is not registered to use any services yet. 
    6. To register for the services used in this sample, choose the **(Mail) - Send mail as you** permission. The dialog will look like this:
-![](/Readme-images/O365-Windows-Connect-ServicesManager.png "Windows Phone interface for the O365-WinPlatform-Connect sample")
+![O365 app registration page](/Readme-images/O365-Windows-Connect-ServicesManager.png "Windows Phone interface for the O365-WinPlatform-Connect sample")
    7. After you click **OK** in the Services Manager dialog box, assemblies for connecting to Office 365 APIs will be added to your project. 
 
 ###Universal Windows app registration
 
 The universal Windows app solution contains two projects: **O365-Universal-Connect.Windows** and **O365-Universal-Connect.WindowsPhone**. You can perform the registration steps for one project, and the Office 365 assemblies will be added to both projects. However, you'll still need to right-click the other project name and select Add -> Connected Service. When you do this, you'll see this prompt in the Services Manager dialog box:
 
-![](/Readme-images/O365-Windows-Connect-ServicesManager2.png "Windows Phone interface for the O365-WinPlatform-Connect sample")
+![Dialog confirming to register the project](/Readme-images/O365-Windows-Connect-ServicesManager2.png "Windows Phone interface for the O365-WinPlatform-Connect sample")
 
 Click the **Yes** button. This extra step will make sure that your app gets a redirect URI value in its Azure Active Directory settings. You don't need to know the value of this URI, but it's required for authenticating users in your app.
 
