@@ -10,7 +10,7 @@
 
 **Windows Phone 8.1**  | **Windows ストア**
 ------------- | -------------
-![](../Readme-images/O365-Windows-Connect-PhoneUI.png "O365-WinPlatform-Connect の Windows Phone インターフェイスのサンプル")|![](../Readme-images/O365-Windows-Connect-WindowsUI.png "O365-WinPlatform-Connect の Windows Phone インターフェイスのサンプル")
+![モバイル デバイスでのアプリケーションのメイン ページ](/Readme-images/O365-Windows-Connect-PhoneUI.png "O365-WinPlatform-Connect サンプル用の Windows Phone インターフェイス")|![デスクトップ デバイスでのアプリケーションのメイン ページ](/Readme-images/O365-Windows-Connect-WindowsUI.png "O365-WinPlatform-Connect サンプル用の Windows Phone インターフェイス")
 
 ## 前提条件と構成 ##
 
@@ -32,14 +32,15 @@ Visual Studio 用 Office 365 API ツールを使用すると、各アプリを�
    3. サービス マネージャーのダイアログ ボックスが表示されます。**[Office 365]**、**[アプリの登録]** の順に選択します。
    4. サインイン ダイアログ ボックスで、Office 365 テナントにユーザー名とパスワードを入力します。このユーザー名は、<名前>@<テナント名>.onmicrosoft.com. のパターンに従っています。まだ Office 365 テナントがない場合は、MSDN の特典の一部として無料の開発者サイトを取得するか、無料試用版にサイン アップしてください。
    5. サインインすると、すべてのサービスの一覧が表示されます。アプリはまだどのサービスでも使用する登録がされていないため、アクセス許可は選択できません。 
-   6. このサンプルで使用するサービスを登録するためには、[**(メール) - ユーザーとしてメールを送信**] のアクセス許可を選択します。ダイアログは、次のようになります。![](../Readme-images/O365-Windows-Connect-ServicesManager.png "O365-WinPlatform-Connect サンプルの Windows Phone インターフェイス")
+   6. このサンプルで使用するサービスに登録するためには、**[(メール) - ユーザーとしてメールを送信]** のアクセス許可を選択します。ダイアログは、次のようになります。
+![O365 アプリの登録ページ](/Readme-images/O365-Windows-Connect-ServicesManager.png "O365-WinPlatform-Connect サンプル用の Windows Phone インターフェイス")
    7. [サービス マネージャー] ダイアログ ボックスで **[OK]** をクリックしたら、Office 365 API に接続するためのアセンブリがプロジェクトに追加されます。 
 
 ###ユニバーサル Windows アプリの登録
 
-ユニバーサル Windows アプリのソリューションには 2 つのプロジェクト、**O365-Universal-Connect.Windows** および **O365-Universal-Connect.WindowsPhone** が含まれています。登録手順を 1 つのプロジェクトに対して実行すると、Office 365 のアセンブリは両方のプロジェクトに追加されます。ただし、もう一方のプロジェクト名を右クリックして [追加] -&gt; [接続サービス] を選択する必要があります。この場合、[サービス マネージャー] ダイアログ ボックスに次のメッセージが表示されます。
+ユニバーサル Windows アプリのソリューションには 2 つのプロジェクト、**O365-Universal-Connect.Windows** および **O365-Universal-Connect.WindowsPhone** が含まれています。登録手順を 1 つのプロジェクトに対して実行すると、Office 365 のアセンブリは両方のプロジェクトに追加されます。ただし、もう一方のプロジェクト名を右クリックして [追加] -> [接続サービス] を選択する必要があります。この場合、[サービス マネージャー] ダイアログ ボックスに次のメッセージが表示されます。
 
-![](../Readme-images/O365-Windows-Connect-ServicesManager2.png "O365-WinPlatform-Connect サンプルの Windows Phone インターフェイス")
+![プロジェクトの登録を確認するダイアログ](/Readme-images/O365-Windows-Connect-ServicesManager2.png "O365-WinPlatform-Connect サンプル用の Windows Phone インターフェイス")
 
 **[はい]** ボタンをクリックします。この追加の手順では、アプリが Azure Active Directory 設定でリダイレクト URI 値を確実に取得するようにします。この URI 値を認識する必要はありませんが、アプリでユーザーを認証するために必要になります。
 
@@ -68,5 +69,3 @@ Office 365 開発全般の質問につきましては、「[スタック オー�
 - [Office 365 Starter Project for Windows ストア アプリ](https://github.com/OfficeDev/O365-Windows-Start)
 - [Windows 用 Office 365 プロファイル サンプル](https://github.com/OfficeDev/O365-Win-Profile)
 - [サイト用 Office 365 REST API Explorer](https://github.com/OfficeDev/Office-365-REST-API-Explorer)
-
-
